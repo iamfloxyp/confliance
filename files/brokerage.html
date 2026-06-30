@@ -168,70 +168,111 @@
 </footer>
 <script src="index.js"></script>
 <script>
-/* Mobile nav */
-const burger = document.getElementById('burger-btn');
-const mobNav = document.getElementById('mobile-nav');
-const mobClose = document.getElementById('mob-close-btn');
-const mobDrop = document.getElementById('mob-drop-btn');
-const mobSub  = document.getElementById('mob-sub-menu');
-const mobArrow= document.getElementById('mob-drop-arrow');
+(function () {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabPanels = document.querySelectorAll(".tab-panel");
 
-function openMob()  { mobNav.classList.add('open');  burger.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
-function closeMob() { mobNav.classList.remove('open');burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const targetId = btn.getAttribute("data-tab");
 
-if(burger)  burger.addEventListener('click', openMob);
-if(mobClose) mobClose.addEventListener('click', closeMob);
-document.addEventListener('keydown', e => { if(e.key==='Escape'){ closeMob(); closeModal && closeModal(); } });
-if(mobDrop) mobDrop.addEventListener('click', () => {
-  const o = mobSub.classList.toggle('open');
-  mobArrow.textContent = o ? '▴' : '▾';
-  mobDrop.setAttribute('aria-expanded', String(o));
-});
+      tabButtons.forEach(function (button) {
+        button.classList.remove("active");
+        button.setAttribute("aria-selected", "false");
+      });
 
-/* Active nav link highlight */
-const page = location.pathname.split('/').pop() || 'index.html';
-const map = {
-  'index.html':'nav-home','who-we-are.html':'nav-who','what-we-do.html':'nav-wwd',
-  'brokerage.html':'nav-brok','advisory.html':'nav-adv',
-  'insights.html':'nav-ins','contact.html':'nav-con',
-  'insurance-brokerage.html':'nav-wwd','employee-benefits-advisory.html':'nav-wwd',
-  'leaderships.html':'nav-brok'
-};
-const activeId = map[page];
-if(activeId){ const el=document.getElementById(activeId); if(el) el.classList.add('active'); }
-</script>
-<script>
-/* Tab switching */
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
-    document.getElementById(btn.dataset.tab).classList.add('active');
+      tabPanels.forEach(function (panel) {
+        panel.classList.remove("active");
+      });
+
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      }
+    });
   });
-});
 
-/* Bio data */
-const BIOS = {
-  remi:{ name:'Alhaji Ismaila Aderemi Bello, MSc FCA', role:'Chairman', photo:'https://confianceib.com/wp-content/uploads/2021/10/RemiBello.CIBL-photo-removebg-preview_auto_x2.jpg', bio:'<p>Alhaji Ismaila Aderemi Bello is a Fellow Chartered Accountant, Fellow Chartered Tax Practitioner and member of the Institute of Directors (IOD). An Alumnus of Lagos Business School, he has attended several professional courses both at home and abroad. He holds BSc and MSc degrees in Accounting.</p><p>Remi Bello is currently District Governor of Rotary District 9110, immediate past Managing Director/CEO of Crittall-Hope Nigeria Limited, and Past President of the Lagos Chamber of Commerce and Industry (LCCI).</p>' },
-  bayo:{ name:'Bayo Yusuf', role:'Managing Director / Chief Executive Officer', photo:'https://confianceib.com/wp-content/uploads/2021/10/corrected.png', bio:'<p>Bayo Yusuf is a former Managing Director/Chief Executive Officer of UBA Pensions Custodian Limited, a leading pension assets custody company in Nigeria. A Chartered Insurer with significant corporate experience in strategy, risk management, corporate governance, actuarial science, pensions, trusteeship, asset management, and custodian functions spanning over 28 years. Bayo is a Graduate of Actuarial Science from the University of Lagos and a Chartered Stockbroker.</p><p>Bayo was a member of the Executive Committee of the Pension Fund Operators Association of Nigeria (PenOp) and a former Chairman of the Shared Service Committee of the Association, where he led various initiatives to improve operational processes and efficiency within the pension industry.</p><p>An alumnus of the Lagos Business School and IESE Business School, Spain, as well as a member of the Institute of Directors (IoD) Nigeria.</p>' },
-  arafat:{ name:'Arafat Olayinka Balogun', role:'Director', photo:'https://confianceib.com/wp-content/uploads/2021/10/ArafatBalogun.CIBLphoto-removebg-preview_auto_x2.jpg', bio:'<p>Arafat Olayinka Balogun is an alumna of the University of Miami, Coral Gables and the University of Virginia, Charlottesville. She holds an A.B in Politics and Public Affairs and a J.D (Law); M.A in Middle East &amp; American Foreign Policy and an LLM (Corporate Finance &amp; Taxation).</p><p>She is licensed to practice law in the Commonwealth of Virginia and the Federal Republic of Nigeria. Arafat has had a rewarding career in Law, Compliance and Banking spanning over 25 years — including serving as pioneer Chief Compliance Officer at United Bank for Africa Plc. She currently provides legal and advisory services to several local and multinational companies.</p>' },
-  azizat:{ name:'Azizat Mohammed', role:'Director', photo:'https://confianceib.com/wp-content/uploads/2021/10/AzizatMuhammed.CIBLphoto-removebg-preview_auto_x2.jpg', bio:'<p>Azizat Mohammed is a Chartered Management Consultant, a Strategist and institutional development specialist with extensive experience in the delivery of business solutions, governance, strategy development, digital solutions, agribusiness, and pensions systems.</p><p>Azizat is currently the Founder/CEO of Rubric Strategies Consulting, an innovative &amp; strategic Firm in Nigeria. She holds BSc and MSc in Biology and Environmental Biology respectively.</p>' },
-  paschal:{ name:'Paschal Idowu', role:'Vice President, Technical', photo:'https://confianceib.com/wp-content/uploads/2021/10/pas.png', bio:'<p>Paschal Idowu holds a BSc in Insurance, MBA in Human Resources Management and M.Ed in Community Development from the University of Lagos, Lagos State University and University of Ibadan respectively.</p><p>A Chartered Insurer and Full Member of the Nigerian Institute of Management, he is a consummate Management &amp; Community Consultant with varied professional and technical experience spanning over three decades across foremost Brokerage, Underwriting and Consulting organisations.</p><p>He has attended key strategic courses facilitated locally and internationally, and has been actively engaged in a number of enterprise recapture, transformation and re-engineering programmes.</p>' }
-};
+  const BIOS = {
+    remi: {
+      name: "Alhaji Ismaila Aderemi Bello, MSc FCA",
+      role: "Chairman",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/RemiBello.CIBL-photo-removebg-preview_auto_x2.jpg",
+      bio: "<p>Alhaji Ismaila Aderemi Bello is a Fellow Chartered Accountant, Fellow Chartered Tax Practitioner and member of the Institute of Directors. He holds BSc and MSc degrees in Accounting.</p><p>He is currently District Governor of Rotary District 9110, immediate past Managing Director/CEO of Crittall-Hope Nigeria Limited, and Past President of the Lagos Chamber of Commerce and Industry.</p>"
+    },
 
-function openBio(key) {
-  const b = BIOS[key]; if(!b) return;
-  document.getElementById('modal-role').textContent = b.role;
-  document.getElementById('modal-name').textContent = b.name;
-  document.getElementById('modal-body').innerHTML  = b.bio;
-  const img = document.getElementById('modal-img'); img.src = b.photo; img.alt = b.name;
-  document.getElementById('bio-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('modal-close-btn').focus();
-}
-function closeModal() { document.getElementById('bio-modal').classList.remove('open'); document.body.style.overflow = ''; }
-document.getElementById('modal-close-btn').addEventListener('click', closeModal);
-document.getElementById('bio-modal').addEventListener('click', e => { if(e.target===document.getElementById('bio-modal')) closeModal(); });
+    bayo: {
+      name: "Bayo Yusuf",
+      role: "Managing Director / Chief Executive Officer",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/corrected.png",
+      bio: "<p>Bayo Yusuf is a former Managing Director/Chief Executive Officer of UBA Pensions Custodian Limited. He is a Chartered Insurer with over 28 years of experience in strategy, risk management, corporate governance, actuarial science, pensions, trusteeship, asset management, and custodian functions.</p>"
+    },
+
+    arafat: {
+      name: "Arafat Olayinka Balogun",
+      role: "Director",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/ArafatBalogun.CIBLphoto-removebg-preview_auto_x2.jpg",
+      bio: "<p>Arafat Olayinka Balogun is licensed to practice law in Virginia and Nigeria. She has over 25 years of experience across law, compliance, and banking.</p>"
+    },
+
+    azizat: {
+      name: "Azizat Mohammed",
+      role: "Director",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/AzizatMuhammed.CIBLphoto-removebg-preview_auto_x2.jpg",
+      bio: "<p>Azizat Mohammed is a Chartered Management Consultant, strategist, and institutional development specialist with experience in governance, strategy, digital solutions, agribusiness, and pensions systems.</p>"
+    },
+
+    paschal: {
+      name: "Paschal Idowu",
+      role: "Vice President, Technical",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/pas.png",
+      bio: "<p>Paschal Idowu is a Chartered Insurer with over three decades of experience across brokerage, underwriting, and consulting organisations.</p>"
+    }
+  };
+
+  window.openBio = function (key) {
+    const b = BIOS[key];
+    if (!b) return;
+
+    document.getElementById("modal-role").textContent = b.role;
+    document.getElementById("modal-name").textContent = b.name;
+    document.getElementById("modal-body").innerHTML = b.bio;
+
+    const img = document.getElementById("modal-img");
+    img.src = b.photo;
+    img.alt = b.name;
+
+    document.getElementById("bio-modal").classList.add("open");
+    document.body.style.overflow = "hidden";
+  };
+
+  window.closeModal = function () {
+    document.getElementById("bio-modal").classList.remove("open");
+    document.body.style.overflow = "";
+  };
+
+  const closeBtn = document.getElementById("modal-close-btn");
+  const modal = document.getElementById("bio-modal");
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", window.closeModal);
+  }
+
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        window.closeModal();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      window.closeModal();
+    }
+  });
+})();
 </script>
 </body></html>

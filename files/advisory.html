@@ -26,7 +26,7 @@
         <li><a href="what-we-do.html" id="nav-wwd">What We Do</a></li>
         <li class="has-drop">
           <button aria-haspopup="true" aria-expanded="false">Leadership</button>
-   <ul class="drop-menu" role="menu">
+          <ul class="drop-menu" role="menu">
             <li><a href="brokerage.html" id="nav-brok" role="menuitem">Insurance Brokerage</a></li>
 <li><a href="advisory.html" id="nav-adv" role="menuitem">Employee Benefits Advisory</a></li>
           </ul>
@@ -165,6 +165,38 @@
 <script src="index.js"></script>
 <script>
 (function () {
+  const burger = document.getElementById("burger-btn");
+  const mobNav = document.getElementById("mobile-nav");
+  const mobClose = document.getElementById("mob-close-btn");
+  const mobDrop = document.getElementById("mob-drop-btn");
+  const mobSub = document.getElementById("mob-sub-menu");
+  const mobArrow = document.getElementById("mob-drop-arrow");
+
+  function openMob() {
+    if (!mobNav || !burger) return;
+    mobNav.classList.add("open");
+    burger.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMob() {
+    if (!mobNav || !burger) return;
+    mobNav.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  if (burger) burger.addEventListener("click", openMob);
+  if (mobClose) mobClose.addEventListener("click", closeMob);
+
+  if (mobDrop && mobSub && mobArrow) {
+    mobDrop.addEventListener("click", function () {
+      const opened = mobSub.classList.toggle("open");
+      mobArrow.textContent = opened ? "▴" : "▾";
+      mobDrop.setAttribute("aria-expanded", String(opened));
+    });
+  }
+
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabPanels = document.querySelectorAll(".tab-panel");
 
@@ -185,10 +217,97 @@
       btn.setAttribute("aria-selected", "true");
 
       const targetPanel = document.getElementById(targetId);
-      if (targetPanel) {
-        targetPanel.classList.add("active");
-      }
+      if (targetPanel) targetPanel.classList.add("active");
     });
+  });
+
+  const page = location.pathname.split("/").pop() || "index.html";
+  const map = {
+    "index.html": "nav-home",
+    "who-we-are.html": "nav-who",
+    "what-we-do.html": "nav-wwd",
+    "brokerage.html": "nav-brok",
+    "advisory.html": "nav-adv",
+    "insights.html": "nav-ins",
+    "contact.html": "nav-con",
+    "insurance-brokerage.html": "nav-wwd",
+    "employee-benefits-advisory.html": "nav-wwd",
+    "leaderships.html": "nav-brok"
+  };
+
+  const activeId = map[page];
+  if (activeId) {
+    const el = document.getElementById(activeId);
+    if (el) el.classList.add("active");
+  }
+
+  const BIOS = {
+    godwin: {
+      name: "Godwin Emuejevoke Onoro",
+      role: "Chairman, Employee Benefits Advisory",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-23-at-4.39.46-PM-removebg-preview_auto_x2.png",
+      bio: "<p>Godwin is a professional and growth-focused Pension Executive with over fifteen (15) years' experience in the pension industry. He has managed all aspects of the operations of a Pension Fund Administrator (PFA) as an Executive Director for over seven (7) years and as Acting Managing Director for six (6) months.</p><p>Godwin graduated with a Bachelor's degree in Accounting from the University of Benin. He is a member of the Chartered Institute of Accountants of Nigeria (ICAN) and a dealing clerk of the Nigerian Stock Exchange.</p>"
+    },
+    bayo: {
+      name: "Bayo Yusuf",
+      role: "Managing Director / Chief Executive Officer",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/corrected.png",
+      bio: "<p>Bayo Yusuf is a former Managing Director/Chief Executive Officer of UBA Pensions Custodian Limited. He is a Chartered Insurer with over 28 years of experience in strategy, risk management, corporate governance, actuarial science, pensions, trusteeship, asset management, and custodian functions.</p>"
+    },
+    azizat: {
+      name: "Azizat Mohammed",
+      role: "Director",
+      photo: "https://confianceib.com/wp-content/uploads/2021/10/AzizatMuhammed.CIBLphoto-removebg-preview_auto_x2.jpg",
+      bio: "<p>Azizat Mohammed is a Chartered Management Consultant, strategist, and institutional development specialist with experience in governance, strategy development, digital solutions, agribusiness, and pensions systems.</p>"
+    },
+    maryam: {
+      name: "Maryam Ibrahim Bello",
+      role: "Senior Vice-President, Employee Benefits Advisory",
+      photo: "https://confianceib.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-24-at-9.44.28-AM-removebg-preview.jpg",
+      bio: "<p>Maryam Ibrahim Bello is a financial services and regulatory expert with over three decades of leadership experience across pension administration, banking operations, enterprise data governance, and institutional transformation.</p>"
+    }
+  };
+
+  window.openBio = function (key) {
+    const b = BIOS[key];
+    if (!b) return;
+
+    document.getElementById("modal-role").textContent = b.role;
+    document.getElementById("modal-name").textContent = b.name;
+    document.getElementById("modal-body").innerHTML = b.bio;
+
+    const img = document.getElementById("modal-img");
+    img.src = b.photo;
+    img.alt = b.name;
+
+    document.getElementById("bio-modal").classList.add("open");
+    document.body.style.overflow = "hidden";
+  };
+
+  window.closeModal = function () {
+    const modal = document.getElementById("bio-modal");
+    if (!modal) return;
+
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+  };
+
+  const closeBtn = document.getElementById("modal-close-btn");
+  const modal = document.getElementById("bio-modal");
+
+  if (closeBtn) closeBtn.addEventListener("click", window.closeModal);
+
+  if (modal) {
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) window.closeModal();
+    });
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeMob();
+      window.closeModal();
+    }
   });
 })();
 </script>
