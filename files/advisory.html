@@ -26,9 +26,9 @@
         <li><a href="what-we-do.html" id="nav-wwd">What We Do</a></li>
         <li class="has-drop">
           <button aria-haspopup="true" aria-expanded="false">Leadership</button>
-          <ul class="drop-menu" role="menu">
-            <li><a href="insurance-brokerage.html" id="nav-brok" role="menuitem">Insurance Brokerage</a></li>
-<li><a href="employee-benefits-advisory.html" id="nav-adv" role="menuitem">Employee Benefits Advisory</a></li>
+   <ul class="drop-menu" role="menu">
+            <li><a href="brokerage.html" id="nav-brok" role="menuitem">Insurance Brokerage</a></li>
+<li><a href="advisory.html" id="nav-adv" role="menuitem">Employee Benefits Advisory</a></li>
           </ul>
         </li>
         <li><a href="insights.html" id="nav-ins">Insights</a></li>
@@ -164,66 +164,32 @@
 </footer>
 <script src="index.js"></script>
 <script>
-  
-/* Mobile nav */
-const burger = document.getElementById('burger-btn');
-const mobNav = document.getElementById('mobile-nav');
-const mobClose = document.getElementById('mob-close-btn');
-const mobDrop = document.getElementById('mob-drop-btn');
-const mobSub  = document.getElementById('mob-sub-menu');
-const mobArrow= document.getElementById('mob-drop-arrow');
+(function () {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabPanels = document.querySelectorAll(".tab-panel");
 
-function openMob()  { mobNav.classList.add('open');  burger.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
-function closeMob() { mobNav.classList.remove('open');burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      const targetId = btn.getAttribute("data-tab");
 
-if(burger)  burger.addEventListener('click', openMob);
-if(mobClose) mobClose.addEventListener('click', closeMob);
-document.addEventListener('keydown', e => { if(e.key==='Escape'){ closeMob(); closeModal && closeModal(); } });
-if(mobDrop) mobDrop.addEventListener('click', () => {
-  const o = mobSub.classList.toggle('open');
-  mobArrow.textContent = o ? '▴' : '▾';
-  mobDrop.setAttribute('aria-expanded', String(o));
-});
+      tabButtons.forEach(function (button) {
+        button.classList.remove("active");
+        button.setAttribute("aria-selected", "false");
+      });
 
-/* Active nav link highlight */
-const page = location.pathname.split('/').pop() || 'index.html';
-const map = {
-  'index.html':'nav-home','who-we-are.html':'nav-who','what-we-do.html':'nav-wwd',
-  'brokerage.html':'nav-brok','advisory.html':'nav-adv',
-  'insights.html':'nav-ins','contact.html':'nav-con',
-  'insurance-brokerage.html':'nav-wwd','employee-benefits-advisory.html':'nav-wwd',
-  'leaderships.html':'nav-brok'
-};
-const activeId = map[page];
-if(activeId){ const el=document.getElementById(activeId); if(el) el.classList.add('active'); }
+      tabPanels.forEach(function (panel) {
+        panel.classList.remove("active");
+      });
 
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
-    document.getElementById(btn.dataset.tab).classList.add('active');
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      }
+    });
   });
-});
-
-const BIOS = {
-  godwin:{ name:'Godwin Emuejevoke Onoro', role:'Chairman, Employee Benefits Advisory', photo:'https://confianceib.com/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-23-at-4.39.46-PM-removebg-preview_auto_x2.png', bio:'<p>Godwin is a professional and growth-focused Pension Executive with over fifteen (15) years\' experience in the pension industry. He has managed all aspects of the operations of a Pension Fund Administrator (PFA) as an Executive Director for over seven (7) years and as Acting Managing Director for six (6) months.</p><p>Godwin graduated with a Bachelor\'s degree in Accounting from the University of Benin. He is a member of the Chartered Institute of Accountants of Nigeria (ICAN) and a dealing clerk of the Nigerian Stock Exchange.</p><p>Prior to joining Pensions Alliance Limited, Godwin worked as a senior auditor at Vee Networks (now Airtel), Audit Team Manager at Guinness Nigeria Plc, Resident Inspector at Crystal Bank (now UBA Plc), Assistant Internal Auditor/Project Accountant at Nestl&eacute; Nigeria Plc, and an audit trainee at Eyewumi, Rone &amp; Co Chartered Accountants.</p><p>Godwin has attended several executive and leadership programmes at the Lagos Business School, London Business School, and Columbia Business School in New York.</p>' },
-  bayo:{ name:'Bayo Yusuf', role:'Managing Director / Chief Executive Officer', photo:'https://confianceib.com/wp-content/uploads/2021/10/corrected.png', bio:'<p>Bayo Yusuf is a former Managing Director/Chief Executive Officer of UBA Pensions Custodian Limited, a leading pension assets custody company in Nigeria. A Chartered Insurer with significant corporate experience in strategy, risk management, corporate governance, actuarial science, pensions, trusteeship, asset management, and custodian functions spanning over 28 years. Bayo is a Graduate of Actuarial Science from the University of Lagos and a Chartered Stockbroker.</p><p>Bayo was a member of the Executive Committee of the Pension Fund Operators Association of Nigeria (PenOp) and a former Chairman of the Shared Service Committee of the Association, where he led various initiatives to improve operational processes and efficiency within the pension industry.</p><p>An alumnus of the Lagos Business School and IESE Business School, Spain, as well as a member of the Institute of Directors (IoD) Nigeria.</p>' },
-  azizat:{ name:'Azizat Mohammed', role:'Director', photo:'https://confianceib.com/wp-content/uploads/2021/10/AzizatMuhammed.CIBLphoto-removebg-preview_auto_x2.jpg', bio:'<p>Azizat Mohammed is a Chartered Management Consultant, a Strategist and institutional development specialist with extensive experience in the delivery of business solutions, governance, strategy development, digital solutions, agribusiness, and pensions systems.</p><p>Azizat is currently the Founder/CEO of Rubric Strategies Consulting, an innovative &amp; strategic Firm in Nigeria. She holds BSc and MSc in Biology and Environmental Biology respectively.</p>' },
-  maryam:{ name:'Maryam Ibrahim Bello', role:'Senior Vice-President, Employee Benefits Advisory', photo:'https://confianceib.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-04-24-at-9.44.28-AM-removebg-preview.jpg', bio:'<p>Maryam Ibrahim Bello is a highly accomplished financial services and regulatory expert with over three decades of leadership experience spanning pension administration, banking operations, enterprise data governance, and institutional transformation.</p><p>She brings exceptional depth in Nigeria\'s pension ecosystem, having played a pivotal role in strengthening the regulatory and operational architecture of the industry during her tenure at the National Pension Commission (PenCom), where she served as Acting Director and Head of the National Databank Management Department.</p><p>Maryam was instrumental in driving some of the most impactful digital and structural reforms in the Nigerian pension industry — including the automation and integrity enhancement of the national pension contributor database, the implementation of the RSA Transfer Platform, and large-scale data recapture and validation exercises.</p><p>At Confiance Employee Benefits Advisory Limited, Maryam provides strategic leadership in pension reform advisory, helping clients navigate policy design, implementation frameworks, and operational excellence.</p><p>She holds a Postgraduate Diploma in Management from Usmanu Danfodiyo University and a B.A in Mass Communication from Bayero University Kano. She is a Fellow of the Chartered Institute of Project Managers and a member of the Nigerian Institute of Management (Chartered).</p>' }
-};
-function openBio(key) {
-  const b = BIOS[key]; if(!b) return;
-  document.getElementById('modal-role').textContent = b.role;
-  document.getElementById('modal-name').textContent = b.name;
-  document.getElementById('modal-body').innerHTML  = b.bio;
-  const img = document.getElementById('modal-img'); img.src = b.photo; img.alt = b.name;
-  document.getElementById('bio-modal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-  document.getElementById('modal-close-btn').focus();
-}
-function closeModal() { document.getElementById('bio-modal').classList.remove('open'); document.body.style.overflow = ''; }
-document.getElementById('modal-close-btn').addEventListener('click', closeModal);
-document.getElementById('bio-modal').addEventListener('click', e => { if(e.target===document.getElementById('bio-modal')) closeModal(); });
+})();
 </script>
 </body></html>
