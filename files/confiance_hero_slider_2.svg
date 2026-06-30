@@ -1,0 +1,116 @@
+<svg width="100%" viewBox="0 0 1290 610" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Confiance Insurance Brokers – Hero Slide 2</title>
+  <desc>Employee Benefits Advisory hero banner using Confiance primary purple colors.</desc>
+
+  <defs>
+    <linearGradient id="purpleBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140B2B"/>
+      <stop offset="50%" stop-color="#2D1D59"/>
+      <stop offset="100%" stop-color="#593799"/>
+    </linearGradient>
+
+    <linearGradient id="primaryPurple2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#593799"/>
+      <stop offset="100%" stop-color="#7752BC"/>
+    </linearGradient>
+
+    <linearGradient id="cardBg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D1D59"/>
+      <stop offset="100%" stop-color="#140B2B"/>
+    </linearGradient>
+
+    <radialGradient id="purpleGlow2" cx="75%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#7752BC" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#140B2B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="600" fill="url(#purpleBg2)"/>
+  <rect width="1280" height="600" fill="url(#purpleGlow2)"/>
+
+  <g stroke="#7752BC" stroke-width="0.5" opacity="0.25">
+    <line x1="0" y1="0" x2="600" y2="600"/>
+    <line x1="200" y1="0" x2="800" y2="600"/>
+    <line x1="400" y1="0" x2="1000" y2="600"/>
+    <line x1="600" y1="0" x2="1200" y2="600"/>
+    <line x1="800" y1="0" x2="1400" y2="600"/>
+    <line x1="1000" y1="0" x2="1600" y2="600"/>
+  </g>
+
+  <rect x="0" y="0" width="1280" height="4" fill="url(#primaryPurple2)"/>
+  <rect x="0" y="0" width="5" height="600" fill="url(#primaryPurple2)"/>
+
+  <rect x="80" y="108" width="250" height="30" rx="3" fill="#593799" opacity="0.25"/>
+  <rect x="80" y="108" width="3" height="30" fill="#7752BC"/>
+  <text x="95" y="128" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF" letter-spacing="2">EMPLOYEE BENEFITS ADVISORY</text>
+
+  <text x="80" y="205" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#FFFFFF">Design Benefits</text>
+  <text x="80" y="263" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#FFFFFF">Your Team</text>
+  <text x="80" y="321" font-family="Georgia, serif" font-size="50" font-weight="700" fill="#D8CCFF">Will Value</text>
+
+  <rect x="80" y="345" width="50" height="3" fill="url(#primaryPurple2)"/>
+
+  <text x="80" y="382" font-family="Arial, sans-serif" font-size="16" fill="#C9C2E8">We help you design and review employee benefit</text>
+  <text x="80" y="405" font-family="Arial, sans-serif" font-size="16" fill="#C9C2E8">schemes that meet stakeholder aspirations.</text>
+
+  <a href="contact.html" target="_self">
+    <rect x="80" y="445" width="190" height="50" rx="6" fill="#593799"/>
+    <text x="175" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="1">TALK TO AN ADVISOR</text>
+  </a>
+
+  <a href="what-we-do.html" target="_self">
+    <rect x="288" y="445" width="150" height="50" rx="6" fill="none" stroke="#D8CCFF" stroke-width="1.5"/>
+    <text x="363" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#D8CCFF" letter-spacing="1">OUR SERVICES</text>
+  </a>
+
+  <rect x="700" y="70" width="520" height="460" rx="8" fill="url(#cardBg2)" stroke="#7752BC" stroke-width="1"/>
+  <rect x="700" y="70" width="520" height="60" rx="8" fill="#3B2678"/>
+  <rect x="700" y="110" width="520" height="20" fill="#3B2678"/>
+  <text x="960" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="2">BENEFIT PLAN OVERVIEW</text>
+
+  <rect x="724" y="152" width="220" height="90" rx="6" fill="#24164B" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="754" cy="177" r="16" fill="#7752BC" opacity="0.22"/>
+  <text x="780" y="178" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Health Insurance</text>
+  <text x="780" y="196" font-family="Arial, sans-serif" font-size="11" fill="#C9C2E8">Medical &amp; hospitalization</text>
+  <text x="724" y="230" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF">✓ Comprehensive cover</text>
+
+  <rect x="964" y="152" width="220" height="90" rx="6" fill="#24164B" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="994" cy="177" r="16" fill="#D8CCFF" opacity="0.18"/>
+  <text x="1020" y="178" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Life Coverage</text>
+  <text x="1020" y="196" font-family="Arial, sans-serif" font-size="11" fill="#C9C2E8">Group life assurance</text>
+  <text x="964" y="230" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF">✓ Flexible sum assured</text>
+
+  <rect x="724" y="262" width="220" height="90" rx="6" fill="#24164B" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="754" cy="287" r="16" fill="#7752BC" opacity="0.22"/>
+  <text x="754" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#D8CCFF">₦</text>
+  <text x="780" y="288" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Pension Advisory</text>
+  <text x="780" y="306" font-family="Arial, sans-serif" font-size="11" fill="#C9C2E8">Retirement planning</text>
+  <text x="724" y="340" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF">✓ RSA compliant</text>
+
+  <rect x="964" y="262" width="220" height="90" rx="6" fill="#24164B" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="994" cy="287" r="16" fill="#7752BC" opacity="0.22"/>
+  <text x="994" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#D8CCFF">+</text>
+  <text x="1020" y="288" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Wellness Benefits</text>
+  <text x="1020" y="306" font-family="Arial, sans-serif" font-size="11" fill="#C9C2E8">Staff wellbeing programs</text>
+  <text x="964" y="340" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF">✓ Holistic approach</text>
+
+  <rect x="724" y="372" width="220" height="90" rx="6" fill="#24164B" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="754" cy="397" r="16" fill="#7752BC" opacity="0.22"/>
+  <text x="754" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#D8CCFF">≡</text>
+  <text x="780" y="398" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Scheme Review</text>
+  <text x="780" y="416" font-family="Arial, sans-serif" font-size="11" fill="#C9C2E8">Annual benefit audit</text>
+  <text x="724" y="450" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF">✓ Benchmarked plans</text>
+
+  <rect x="964" y="372" width="220" height="90" rx="6" fill="#24164B" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="994" cy="397" r="16" fill="#D8CCFF" opacity="0.18"/>
+  <text x="994" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#D8CCFF">★</text>
+  <text x="1020" y="398" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Custom Plans</text>
+  <text x="1020" y="416" font-family="Arial, sans-serif" font-size="11" fill="#C9C2E8">Tailored to your needs</text>
+  <text x="964" y="450" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF">✓ Any organization size</text>
+
+  <rect x="724" y="478" width="460" height="34" rx="4" fill="#593799" opacity="0.2"/>
+  <text x="960" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#D8CCFF">Trusted by leading organizations across Nigeria</text>
+
+  <text x="1200" y="50" text-anchor="end" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#D8CCFF" letter-spacing="1">CONFIANCE</text>
+  <text x="1200" y="66" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#C9C2E8" letter-spacing="3">INSURANCE BROKERS</text>
+</svg>

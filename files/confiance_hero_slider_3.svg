@@ -1,0 +1,106 @@
+<svg width="100%" viewBox="0 0 1290 610" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Confiance Insurance Brokers - Hero Slide 3: Insurance Brokerage</title>
+  <desc>A professional hero banner for insurance brokerage services using Confiance purple brand color.</desc>
+
+  <defs>
+    <linearGradient id="slateBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140B2B"/>
+      <stop offset="50%" stop-color="#2D1D59"/>
+      <stop offset="100%" stop-color="#140B2B"/>
+    </linearGradient>
+
+    <linearGradient id="amberLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#593799"/>
+      <stop offset="100%" stop-color="#7752BC"/>
+    </linearGradient>
+
+    <linearGradient id="amberText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D8CCFF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <radialGradient id="rGlow" cx="80%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#7752BC" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#140B2B" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="cardSlate" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D1D59"/>
+      <stop offset="100%" stop-color="#140B2B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="600" fill="url(#slateBg)"/>
+  <rect width="1280" height="600" fill="url(#rGlow)"/>
+
+  <g fill="#7752BC" opacity="0.28">
+    <circle cx="100" cy="100" r="1.5"/><circle cx="160" cy="100" r="1.5"/><circle cx="220" cy="100" r="1.5"/><circle cx="280" cy="100" r="1.5"/>
+    <circle cx="100" cy="160" r="1.5"/><circle cx="160" cy="160" r="1.5"/><circle cx="220" cy="160" r="1.5"/><circle cx="280" cy="160" r="1.5"/>
+    <circle cx="100" cy="220" r="1.5"/><circle cx="160" cy="220" r="1.5"/><circle cx="220" cy="220" r="1.5"/><circle cx="280" cy="220" r="1.5"/>
+    <circle cx="100" cy="280" r="1.5"/><circle cx="160" cy="280" r="1.5"/><circle cx="220" cy="280" r="1.5"/><circle cx="280" cy="280" r="1.5"/>
+    <circle cx="100" cy="340" r="1.5"/><circle cx="160" cy="340" r="1.5"/><circle cx="220" cy="340" r="1.5"/>
+    <circle cx="100" cy="400" r="1.5"/><circle cx="160" cy="400" r="1.5"/>
+  </g>
+
+  <rect x="0" y="0" width="1280" height="4" fill="url(#amberLine)"/>
+
+  <rect x="80" y="108" width="205" height="30" rx="15" fill="#593799" opacity="0.18"/>
+  <circle cx="100" cy="123" r="6" fill="#593799"/>
+  <text x="115" y="128" font-family="Arial, sans-serif" font-size="12" fill="#D8CCFF" letter-spacing="1.5">INSURANCE BROKERAGE</text>
+
+  <text x="80" y="208" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#FFFFFF">We Shop the</text>
+  <text x="80" y="268" font-family="Georgia, serif" font-size="52" font-weight="700" fill="#FFFFFF">Market So You</text>
+  <text x="80" y="328" font-family="Georgia, serif" font-size="52" font-weight="700" fill="url(#amberText)">Don't Have To</text>
+
+  <rect x="80" y="352" width="55" height="3" fill="url(#amberLine)"/>
+
+  <text x="80" y="390" font-family="Arial, sans-serif" font-size="16" fill="#C9C2E8">We work with leading insurance providers</text>
+  <text x="80" y="413" font-family="Arial, sans-serif" font-size="16" fill="#C9C2E8">to find you the best cover at the best price.</text>
+
+  <a href="contact.html" target="_self">
+    <rect x="80" y="450" width="185" height="50" rx="6" fill="#593799"/>
+    <text x="172" y="481" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="1">GET A FREE QUOTE</text>
+  </a>
+
+  <a href="what-we-do.html" target="_self">
+    <rect x="283" y="450" width="150" height="50" rx="6" fill="none" stroke="#D8CCFF" stroke-width="1.5"/>
+    <text x="358" y="481" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#D8CCFF" letter-spacing="0.5">HOW IT WORKS</text>
+  </a>
+
+  <line x1="960" y1="160" x2="960" y2="470" stroke="#7752BC" stroke-width="2" stroke-dasharray="6,4" opacity="0.35"/>
+
+  <rect x="740" y="120" width="380" height="80" rx="8" fill="url(#cardSlate)" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="790" cy="160" r="22" fill="#593799" opacity="0.18"/>
+  <text x="790" y="166" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#D8CCFF">01</text>
+  <text x="830" y="150" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Understand Your Needs</text>
+  <text x="830" y="170" font-family="Arial, sans-serif" font-size="12" fill="#C9C2E8">We assess your risk profile &amp; coverage gaps</text>
+  <rect x="740" y="120" width="4" height="80" rx="2" fill="#593799"/>
+
+  <rect x="740" y="230" width="380" height="80" rx="8" fill="url(#cardSlate)" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="790" cy="270" r="22" fill="#7752BC" opacity="0.18"/>
+  <text x="790" y="276" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#D8CCFF">02</text>
+  <text x="830" y="260" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Shop the Market</text>
+  <text x="830" y="280" font-family="Arial, sans-serif" font-size="12" fill="#C9C2E8">We compare 20+ top Nigerian insurers for you</text>
+  <rect x="740" y="230" width="4" height="80" rx="2" fill="#7752BC"/>
+
+  <rect x="740" y="340" width="380" height="80" rx="8" fill="url(#cardSlate)" stroke="#7752BC" stroke-width="1"/>
+  <circle cx="790" cy="380" r="22" fill="#D8CCFF" opacity="0.16"/>
+  <text x="790" y="386" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#D8CCFF">03</text>
+  <text x="830" y="370" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Deliver Best Value</text>
+  <text x="830" y="390" font-family="Arial, sans-serif" font-size="12" fill="#C9C2E8">You get optimal coverage at competitive rates</text>
+  <rect x="740" y="340" width="4" height="80" rx="2" fill="#D8CCFF"/>
+
+  <rect x="740" y="450" width="380" height="80" rx="8" fill="url(#cardSlate)" stroke="#D8CCFF" stroke-width="1.5"/>
+  <circle cx="790" cy="490" r="22" fill="#593799" opacity="0.25"/>
+  <text x="790" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">✓</text>
+  <text x="830" y="480" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Ongoing Support</text>
+  <text x="830" y="500" font-family="Arial, sans-serif" font-size="12" fill="#C9C2E8">Claims advocacy &amp; policy management</text>
+  <rect x="740" y="450" width="4" height="80" rx="2" fill="#D8CCFF"/>
+
+  <text x="1200" y="50" text-anchor="end" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#D8CCFF" letter-spacing="1">CONFIANCE</text>
+  <text x="1200" y="66" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#C9C2E8" letter-spacing="3">INSURANCE BROKERS</text>
+
+  <rect x="0" y="596" width="1280" height="4" fill="url(#amberLine)"/>
+
+  <text x="80" y="580" font-family="Arial, sans-serif" font-size="12" fill="#C9C2E8">(+234)-201-342-4471  ·  info@confianceib.com  ·  confianceib.com</text>
+</svg>

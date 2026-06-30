@@ -1,0 +1,100 @@
+<svg width="100%" viewBox="0 0 1290 900" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Confiance Insurance Brokers Hero Slide</title>
+  <desc>Hero banner for Confiance Insurance Brokers with luxury purple and subtle gold accents.</desc>
+
+  <defs>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12081F"/>
+      <stop offset="50%" stop-color="#1B1034"/>
+      <stop offset="100%" stop-color="#2B1A4F"/>
+    </linearGradient>
+
+    <linearGradient id="mainPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7350C7"/>
+      <stop offset="100%" stop-color="#A88FE7"/>
+    </linearGradient>
+
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#F4D87A"/>
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7350C7"/>
+      <stop offset="100%" stop-color="#2B1A4F"/>
+    </linearGradient>
+
+    <radialGradient id="glow1" cx="70%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#A88FE7" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#12081F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="690" fill="url(#navyGrad)"/>
+  <rect width="1280" height="690" fill="url(#glow1)"/>
+
+  <g stroke="#A88FE7" stroke-width="0.5" opacity="0.14">
+    <line x1="0" y1="100" x2="1280" y2="100"/>
+    <line x1="0" y1="200" x2="1280" y2="200"/>
+    <line x1="0" y1="300" x2="1280" y2="300"/>
+    <line x1="0" y1="400" x2="1280" y2="400"/>
+    <line x1="0" y1="500" x2="1280" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="690"/>
+    <line x1="400" y1="0" x2="400" y2="690"/>
+    <line x1="600" y1="0" x2="600" y2="690"/>
+    <line x1="800" y1="0" x2="800" y2="690"/>
+    <line x1="1000" y1="0" x2="1000" y2="690"/>
+    <line x1="1200" y1="0" x2="1200" y2="690"/>
+  </g>
+
+  <rect x="0" y="0" width="1280" height="4" fill="url(#goldAccent)"/>
+
+  <rect x="80" y="110" width="220" height="32" rx="16" fill="none" stroke="#D4AF37" stroke-width="1"/>
+  <text x="190" y="131" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#F4D87A" letter-spacing="2">TRUSTED SINCE 2010</text>
+
+  <text x="80" y="205" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#FFFFFF" letter-spacing="-1">The Right</text>
+  <text x="80" y="267" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#FFFFFF" letter-spacing="-1">Protection to Keep</text>
+  <text x="80" y="329" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#F3EEFF" letter-spacing="-1">You Moving Forward</text>
+
+  <rect x="80" y="355" width="60" height="3" fill="url(#goldAccent)"/>
+
+  <text x="80" y="395" font-family="Arial, sans-serif" font-size="17" fill="#D4D0E8">Simplifying insurance for individuals</text>
+  <text x="80" y="420" font-family="Arial, sans-serif" font-size="17" fill="#D4D0E8">and businesses across Nigeria.</text>
+
+  <a href="contact.html" target="_self">
+    <rect x="80" y="455" width="180" height="50" rx="6" fill="#7350C7"/>
+    <text x="170" y="486" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" letter-spacing="1">GET STARTED</text>
+  </a>
+
+  <a href="what-we-do.html" target="_self">
+    <rect x="278" y="455" width="160" height="50" rx="6" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <text x="358" y="486" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#F4D87A" letter-spacing="1">LEARN MORE</text>
+  </a>
+
+  <circle cx="920" cy="300" r="240" fill="#7350C7" opacity="0.12"/>
+  <circle cx="920" cy="300" r="190" fill="#A88FE7" opacity="0.09"/>
+
+  <path d="M920 80 L1060 140 L1060 310 Q1060 410 920 460 Q780 410 780 310 L780 140 Z" fill="url(#shieldGrad)" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M920 110 L1030 160 L1030 305 Q1030 390 920 432 Q810 390 810 305 L810 160 Z" fill="none" stroke="#A88FE7" stroke-width="1"/>
+
+  <circle cx="920" cy="268" r="60" fill="#21133F" opacity="0.78"/>
+  <path d="M890 268 L912 292 L952 244" fill="none" stroke="#D4AF37" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="740" y="490" width="130" height="80" rx="6" fill="#21133F" stroke="#7350C7" stroke-width="1"/>
+  <text x="805" y="525" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#F4D87A">500+</text>
+  <text x="805" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#D4D0E8">Clients Served</text>
+
+  <rect x="890" y="490" width="130" height="80" rx="6" fill="#21133F" stroke="#7350C7" stroke-width="1"/>
+  <text x="955" y="525" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#F4D87A">15+</text>
+  <text x="955" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#D4D0E8">Years Experience</text>
+
+  <rect x="1040" y="490" width="140" height="80" rx="6" fill="#21133F" stroke="#7350C7" stroke-width="1"/>
+  <text x="1110" y="525" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#F4D87A">20+</text>
+  <text x="1110" y="548" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#D4D0E8">Insurer Partners</text>
+
+  <text x="1200" y="52" text-anchor="end" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#F4D87A" letter-spacing="1">CONFIANCE</text>
+  <text x="1200" y="68" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#D4D0E8" letter-spacing="3">INSURANCE BROKERS</text>
+
+  <rect x="0" y="670" width="1280" height="20" fill="#12081F" opacity="0.8"/>
+  <rect x="0" y="670" width="420" height="2" fill="url(#goldAccent)"/>
+</svg>
